@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# Почтовый ящик readonly 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Вам необходимо реализовать настраиваемый почтовый клиент, который позволяет
+просматривать письма, сгруппированные по папкам и перемещать их между папками
+(отправка писем не входит в задачу).
+В плане ui/ux можно вдохновляться существующими решениями — Gmail,
+яндекс.почтой, mail.ru или другими.
 
-## Available Scripts
+**Обязательные требования:**
 
-In the project directory, you can run:
+- Реализовать отображение списка писем в табличном виде (колонки: Автор,
+Превью, Дата)
 
-### `npm start`
+- Письма должны быть распределены по папкам (как в обычной почте):
+"Входящие / Отправленные / Черновики / Удаленные / Спам". Должна быть
+возможность зайти в папку и увидеть список содержащихся в ней писем;  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Реализовать crud для папок: создание, просмотр, редактирование и удаление  
+кастомных папок для писем, перемещение в них писем;
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Реализовать возможность выбора строк и перемещения выбранных писем в
+другую папку.  
 
-### `npm test`
+**Bonus**
+- Открытие полного письма на просмотр (отображать Автора, дату отправки,
+полный текст письма);
+- Закладки;
+- хранение данных в localStorage;
+- Прочитанность/непрочитанность сообщений. Возможность принудительно
+прочитать письмо, автоматическая прочитанность после открытия письма;
+- Быстрое удаление писем;
+- Какие-то визуальные фишки, настройка режима отображения, настройка
+отображаемых полей таблицы, тема;
+- Деплой приложения;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Начальные данные:**
 
-### `npm run build`
+Статический список писем (чтение из файла, или просто константа). Реализация
+серверной части не входит в обязательные требования задачи.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Cтек:**  
+React, TypeScript, MobX 
