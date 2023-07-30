@@ -1,0 +1,13 @@
+.custom-item__btns {
+  display: flex;
+  justify-content: space-between;
+}
+.custom-item__btn {
+  padding: 5px;
+  font-size: 1.8rem;
+  color: var(--white);
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}

@@ -1,14 +1,27 @@
 import React, { useEffect } from 'react'
-import { observer } from 'mobx-react-lite';
 import { useParams } from 'react-router-dom'
-import { Messages } from '../../store/messagesStore';
+import { useStore } from '../../hooks/root-store-context'
+import { observer } from 'mobx-react-lite'
+import FullMessage from '../../components/full-message'
 
 const MessagePage = observer(() => {
-  
+  const { Messages } = useStore()
+  const { id } = useParams()
+  const msg = id && Messages.oneMessage(Number(id))
+
+  useEffect(() => {
+    if (msg) {
+      Messages.changeViewed(msg.id, true)
+    }
+  }, [])
 
   return (
     <div>
-      MessagePage
+      {
+        msg ?
+        <FullMessage msg={msg} /> :
+        <p>loading...</p>
+      }
     </div>
   )
 })

@@ -1,3 +1,4 @@
+import React from "react";
 import { useRoutes } from "react-router-dom";
 import { FOLDER_ROUTE, HOME_ROUTE, MESSAGE_ROUTE } from "./routers";
 import HomePage from "../pages/home-page";
@@ -29,7 +30,9 @@ export default function AppRouter() {
   return (
     <div className="container">
       <Menu />
-      {publicRoutes} 
+      <section className="main-content">
+        {publicRoutes}
+      </section> 
     </div>
   );
 };

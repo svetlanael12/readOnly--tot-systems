@@ -1,12 +1,22 @@
+import React from 'react';
+import { useBeforeUnload } from 'react-router-dom';
+import { useStore } from './hooks/root-store-context';
 import { observer } from 'mobx-react-lite';
-import React, {useEffect} from 'react';
-import { CustomFolder } from './store/customFolderStore';
 import AppRouter from './routers';
 
 const App = observer(() =>{
+  const {Messages, CustomFolder, Theme} = useStore()
+
+  useBeforeUnload(() => {
+    localStorage.setItem('folders', JSON.stringify(CustomFolder.folders))
+    localStorage.setItem('messages', JSON.stringify(Messages._messages))
+  });
+
   return (
-    <div className="App">
-      <AppRouter />
+    <div className={`body ${Theme.theme}`}>
+      <div className="App">
+        <AppRouter />
+      </div>
     </div>
   );
 })

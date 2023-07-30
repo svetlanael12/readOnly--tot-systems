@@ -1,0 +1,22 @@
+.dropbox {
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid var(--white);
+  border-radius: 3px;
+  background-color: var(--black);
+
+  position: absolute;
+  top: 80%;
+  left: -10px;
+  z-index: 40;
+}
+.body.light-theme .dropbox{
+  border: 1px solid var(--black);
+  background-color: var(--blue);
+}
+.dropbox.show {
+  display: block;
+}
+.dropbox.hide {
+  display: none;
+}

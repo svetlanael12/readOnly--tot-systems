@@ -1,0 +1,13 @@
+.dropbox__item {
+  margin-bottom: 3px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--gray);
+  font-size: 1.2rem;
+
+  list-style-type: none;
+  cursor: pointer;
+}
+.body.light-theme .dropbox__item {
+  color: var(--black);
+  cursor: pointer;
+}

@@ -1,0 +1,13 @@
+.menu__item {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 5px;
+  display: block;
+  border-radius: 3px;
+}
+.menu__item.active {
+  background-color: var(--light-gray);
+}
+.body.light-theme .menu__item.active {
+  background-color: var(--yellow);
+}

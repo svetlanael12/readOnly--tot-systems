@@ -1,0 +1,22 @@
+.full-message__from {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--yellow);
+}
+.full-message__text {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+.full-message__date {
+  margin-bottom: 10px;
+  text-align: end;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--yellow);
+}
+.full-message__btns {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}

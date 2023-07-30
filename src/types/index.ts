@@ -5,5 +5,12 @@ export interface IMessages {
   type: string;
   favorite: boolean;
   viewed: boolean;
+  checked: boolean;
   date: number;
+}
+
+export interface IMenuItem {
+  type: string;
+  name: string;
+  svg: unknown | string
 }

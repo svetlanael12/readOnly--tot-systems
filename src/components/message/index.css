@@ -1,0 +1,28 @@
+.message {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--light-gray);
+}
+.message__container {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.message__from {
+  padding-bottom: 4px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--yellow);
+}
+.message__text {
+  font-size: 1.2rem;
+}
+.message__date {
+  font-size: 1.1rem;
+  color: var(--light-gray);
+}
+.message__btns {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}

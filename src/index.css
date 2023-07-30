@@ -6,10 +6,9 @@
   --dark: #19191a;
   --gray: #232324;
   --light-gray: #505051;
-  --blue: #3c82fd;
+  --blue: #6488a1;
   --yellow: #ff9e00;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -17,20 +16,17 @@
 
   font-family: 'Mulish', sans-serif;
 }
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   transition: all 1s ease 0s;
 }
-
-body {
+.body {
   position: relative;
 
   color: var(--white);
 }
-
-body::after {
+.body::after {
   position: absolute;
   content: '';
   min-height: 100vh;
@@ -38,16 +34,21 @@ body::after {
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--gray);
+  background: var(--dark);
 
   z-index: -2;
 }
-
+.body.light-theme::after {
+  background: var(--blue);
+}
 a {
   text-decoration: none;
-  color: var(--yellow);
+  color: inherit;
 }
-
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
 .App {
   margin: auto;
   max-width: 1200px;
@@ -55,4 +56,59 @@ a {
   padding: 10px;
 
   position: relative;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content {
+  padding: 10px;
+  width: 100%;
+  background-color: var(--gray);
+
+  border-radius: 3px;
+}
+.body.light-theme .main-content {
+  background-color: var(--blue);
+}
+.custom-input {
+  width: 100%;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--light-gray);
+
+  color: var(--white);
+}
+.custom-input:focus,
+.custom-input:active {
+  outline: none;
+  border-bottom: 1px solid var(--white);
+}
+.body.light-theme .custom-input:focus,
+.body.light-theme .custom-input:active {
+  border-bottom: 1px solid var(--black);
+}
+.custom-ckeckbox {
+  border: 1px solid var(--white);
+  border-radius: 3px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  padding: 0 5px;
+
+  cursor: pointer;
+}
+.body.light-theme .custom-ckeckbox{
+  border: 1px solid var(--black);
+}
+.custom-ckeckbox .checkmark {
+  font-size: 1.4rem;
+  display: block;
+  opacity: 0;
+}
+.custom-ckeckbox input[type='checkbox']:checked ~ .checkmark{
+  opacity: 1;
 }
