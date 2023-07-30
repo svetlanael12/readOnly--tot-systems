@@ -10,6 +10,7 @@ const App = observer(() =>{
   useBeforeUnload(() => {
     localStorage.setItem('folders', JSON.stringify(CustomFolder.folders))
     localStorage.setItem('messages', JSON.stringify(Messages._messages))
+    localStorage.setItem('theme', JSON.stringify(Theme.theme))
   });
 
   return (

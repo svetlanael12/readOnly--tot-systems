@@ -16,10 +16,15 @@
   cursor: pointer;
 }
 .menu__btn-new-folder {
+  display: flex;
+  align-items: center;
   border: 1px solid var(--light-gray);
   background-color: transparent;
 }
 .menu__btn-change-theme {
   border: 1px solid var(--yellow);
   background-color: var(--yellow);
+}
+.menu .material-symbols-outlined {
+  font-size: 1.6rem;
 }

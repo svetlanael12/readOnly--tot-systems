@@ -48,8 +48,8 @@ const CustomMenuItem:FC<ICustomMenuItem> = observer(({folder}) => {
     <div className='menu__custom-item custom-item'>
       <MenuItem folder={folderNew} />
       <div className='custom-item__btns'>
-        <button className='custom-item__btn' onClick={editFolder}>&#128393;</button>
-        <button className='custom-item__btn' onClick={removeFolder}>&#128938;</button>
+        <button className='custom-item__btn' onClick={editFolder}><span className="material-symbols-outlined">edit</span></button>
+        <button className='custom-item__btn' onClick={removeFolder}><span className="material-symbols-outlined">close</span></button>
       </div>
       <Modal active={activeModal} setActive={setActiveModal}>
         <button onClick={clickBtnModal1} className='modal__btn' disabled={ModalStore.inputModal.length === 0}>Изменить</button>

@@ -43,7 +43,7 @@ const Menu = observer(() => {
       {
         CustomFolder.folders.map((folder, ind) => <CustomMenuItem folder={folder} key={ind} />)
       }
-      <button className='menu__btn-new-folder' type='button' onClick={() => setActiveModal(!activeModal)}>&#128931; Новая папка</button>
+      <button className='menu__btn-new-folder' type='button' onClick={() => setActiveModal(!activeModal)}><span className="material-symbols-outlined">add</span> Новая папка</button>
       <Modal active={activeModal} setActive={setActiveModal}>
         <button 
           className='modal__btn' 

@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx"
 
 class ThemeStores {
-  _theme = ''
+  _theme = localStorage.getItem('theme') ? JSON.parse(localStorage.getItem('theme') || '') : ''
 
   constructor() {
     makeAutoObservable(this)
