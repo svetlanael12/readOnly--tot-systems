@@ -26,3 +26,23 @@
   justify-content: end;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .message__text-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    align-items: center;
+  }
+  .message__from {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .message__text {
+    grid-area: 1 / 2 / 2 / 4;
+  }
+  .message__date {
+    grid-area: 1 / 4 / 2 / 5;
+    justify-self: end;
+  }
+}

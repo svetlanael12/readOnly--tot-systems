@@ -65,7 +65,7 @@ const Message: FC<IMessageProps> = observer(({msg}) => {
           <input type="checkbox" checked={check} onChange={(e) => checkMessage(e)} className='visually-hidden'/>
           <span className='checkmark'>&#10003;</span>
         </label>
-        <NavLink to={MESSAGE_ROUTE + '/' + msg.id}>
+        <NavLink to={MESSAGE_ROUTE + '/' + msg.id} className='message__text-container'>
           <p className='message__from'>{msg.from}</p>
           <p className='message__text'>{msg.message.slice(0,50)}...</p>
           <p className='message__date'>
